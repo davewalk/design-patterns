@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Design Patterns: Left Nav</title>
+
+	<link rel="stylesheet" href="/styles/main.css">
+</head>
+
+<body>
+ <div id="layout" class="pure-g-r">
+ 	<div id="menu">
+ 		<div class="pure-menu pure-menu-open">
+ 			<h2 align="center">MAP APP</h2>
+ 			<ul id="nav-menu">
+ 				<li>
+ 					<a href="#" class="browser">
+ 						<span>
+ 							<i class="icon-globe"></i>
+ 							  Map Browser
+ 							  <span>
+ 							  	<div class="widget browser-widget">
+						  		Tool stuff here<br />
+						  		All of the tool's stuff goes here<br />
+						  		Backbone will render it, automatically handle updates<br />
+						  		Will also have to handle closing itself
+ 							  	</div>
+ 							  </span>
+ 						</span>
+ 					</a>
+ 				</li>
+ 				<li>
+ 					<a href="#" class="search">
+ 						<span>
+ 							<i class="icon-search"></i>
+ 							  Search
+ 							<span>
+ 								<div class="widget search-widget">
+						  		Tool stuff here for the search widget<br /> k?
+ 							  	</div>
+ 							 </span>
+ 						</span>
+ 					</a>
+ 				</li>
+ 				<li><a href="#"><span><i class="icon-list"></i>  Layers</span></a></li>
+ 				<li><a href="#"><span><i class="icon-question-sign"></i>  Help</span></a></li>
+ 				<li><a href="#"><span><i class="icon-comments"></i>  Feedback</span></a></li>
+ 				<li><a href="#"><span><i class="icon-plus-sign"></i>  Add</span></a></li>
+ 			</ul>
+ 		</div>
+	</div>
+	 <div id="map"><h1 align="center">The map goes here</h1></div>
+</div> 
+
+ <script src="vendor/jquery/jquery.js"></script>
+ <script>
+ $(document).ready(function () {
+ 	$('a').click(function (e) {
+ 		var classClicked = e.currentTarget.classList[0];
+ 		$('.widget').hide();
+ 		$('.' + classClicked + '-widget').fadeIn('fast');
+ 	});
+ });
+ </script>
+</body>
+
+</html>

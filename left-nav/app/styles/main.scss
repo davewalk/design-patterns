@@ -1,0 +1,72 @@
+$FontAwesomePath: "../vendor/font-awesome/font";
+$black: #2B2B2B;
+$gray: #bbb;
+$lightgray: #eee;
+$navbar-width: 200px;
+
+@import '../vendor/pure/src/base/css/normalize.css';
+@import '../vendor/pure/src/grids/css/grids-core.css';
+@import '../vendor/pure/src/grids/css/grids-r.css';
+@import '../vendor/pure/src/grids/css/grids-units.css';
+@import '../vendor/pure/src/menus/css/menus.css';
+@import '../vendor/pure/src/menus/css/menus-core.css';
+@import '../vendor/pure/src/menus/css/menus-r.css';
+@import '../vendor/font-awesome/scss/font-awesome.scss';
+
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#menu {
+	position: fixed;
+	width: $navbar-width;
+	background: $black;
+	top: 0;
+	bottom: 0;
+	height: 100%;
+}
+
+// Not sure why this is set to negative in Pure
+.pure-g-r {
+	letter-spacing: normal;
+}
+
+#menu .pure-menu-open {
+	background: transparent;
+	border: 0;
+	color: white;
+}
+
+#menu a {
+	color: #4A4A4A;
+}
+
+#nav-menu span {
+	width: 0;
+	padding: 0;
+	//font-size: 24px;
+	font-weight: bold;
+}
+
+#nav-menu a {
+	display: block;
+	position: relative;
+}
+
+#map {
+	left: $navbar-width;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+.widget {
+	position: absolute;
+	left: $navbar-width;
+	width: auto;
+	height: auto;
+	top: 0;
+	display: none;
+	padding: 5px;
+	background-color: $lightgray;
+}
