@@ -22,7 +22,7 @@
  							<i class="icon-globe"></i>
  							  Map Browser
  							  <span>
- 							  	<div class="widget browser-widget">
+ 							  	<div class="widget browser-widget widget-down">
 						  		Tool stuff here<br />
 						  		All of the tool's stuff goes here<br />
 						  		Backbone will render it, automatically handle updates<br />
@@ -38,7 +38,7 @@
  							<i class="icon-search"></i>
  							  Search
  							<span>
- 								<div class="widget search-widget">
+ 								<div class="widget search-widget widget-down">
 						  		Tool stuff here for the search widget<br /> k?
  							  	</div>
  							 </span>
@@ -61,7 +61,14 @@
  	$('a').click(function (e) {
  		var classClicked = e.currentTarget.classList[0];
  		$('.widget').hide();
- 		$('.' + classClicked + '-widget').fadeIn('fast');
+ 		var $widget = $('.' + classClicked + '-widget');
+ 		if ($(window).height() - $widget.offset().top < 1) {
+ 			$widget.removeClass('widget-down');
+ 			$widget.addClass('widget-up');
+ 			$('.' + classClicked + '-widget').fadeIn('fast');
+ 		} else {
+ 			$('.' + classClicked + '-widget').fadeIn('fast');
+ 		}
  	});
  });
  </script>

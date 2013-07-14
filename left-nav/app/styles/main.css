@@ -2359,8 +2359,17 @@ body {
   left: 200px;
   width: auto;
   height: auto;
-  top: 0;
   display: none;
   padding: 5px;
   background-color: #eeeeee;
+}
+
+/* line 73, main.scss */
+.widget-down {
+  top: 0;
+}
+
+/* line 77, main.scss */
+.widget-up {
+  bottom: 0;
 }

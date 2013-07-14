@@ -65,8 +65,15 @@ body {
 	left: $navbar-width;
 	width: auto;
 	height: auto;
-	top: 0;
 	display: none;
 	padding: 5px;
 	background-color: $lightgray;
+}
+
+.widget-down {
+	top: 0;
+}
+
+.widget-up {
+	bottom: 0;
 }
